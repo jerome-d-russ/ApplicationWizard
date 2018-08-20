@@ -1,0 +1,7 @@
+<design:component>
+	<design:attribute name="width" label="Width" description="The Horizontal size of the button. Must be valid css." />
+	<design:attribute name="height" label="Height" description="The Vertical size of the button. Must be valid css." />
+	<design:attribute name="bgColor" label="Background Color" description="The background color of the button." />
+	<design:attribute name="color" label="Color" description="The text color of the button." />
+	<design:attribute name="label" label="Label" description="The label that apppears on the button." />
+</design:component>

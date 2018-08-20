@@ -1,0 +1,3 @@
+<aura:documentation>
+	<aura:description>This component is used to place a button on a Lightning Page where the User will be creating new Applications.</aura:description>
+</aura:documentation>
