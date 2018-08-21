@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Applications</value>
+    </caseValues>
+    <fields>
+        <label><!-- Additional Notes --></label>
+        <name>Additional_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Client__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Estimated Revenue --></label>
+        <name>Estimated_Revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- General Contractor --></label>
+        <name>General_Contractor__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Checked if project is Privately funded. Unchecked if Publicly funded. --></help>
+        <label><!-- Is Private --></label>
+        <name>Is_Private__c</name>
+    </fields>
+    <fields>
+        <label><!-- Public Sponsor --></label>
+        <name>Public_Sponsor__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>
