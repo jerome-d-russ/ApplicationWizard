@@ -1,0 +1,56 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <aura:attribute name="step" type="Integer" default="0" access="global" />
+    <aura:attribute name="isPrivate" type="Boolean" default="true"/>
+    
+    <div style="slds-card">
+        <lightning:progressIndicator type="path" currentStep="{!'step' + v.step}">
+            <lightning:progressStep label="New Application" value="step0"/>
+            <lightning:progressStep label="Due Diligence" value="step1"/>
+            <lightning:progressStep label="Review and Submit" value="step2"/>
+        </lightning:progressIndicator>
+    </div>
+    
+    <lightning:recordEditForm aura:id="recordEditForm"
+                              onsubmit="{!c.handleSubmit}"
+                              onsuccess="{!c.handleSuccess}"
+                              objectApiName="Application__c">
+        
+        <lightning:messages />
+        
+        <div class="{!'slds-p-horizontal_small ' + if(or(v.step == 0, v.step == 2), 'slds-show','slds-hide')}">
+            <lightning:inputField fieldName="Client__c" />
+            <lightning:inputField fieldName="General_Contractor__c" />
+            <lightning:inputField fieldName="Estimated_Revenue__c" />
+        </div>
+        
+        <div class="{!'slds-p-horizontal_small ' + if(or(v.step == 1, v.step == 2), 'slds-show','slds-hide')}">
+            <lightning:inputField fieldName="Is_Private__c" onchange="{!c.handlePublicChange}"/>
+            <div class="{!if(v.isPrivate == true,'slds-show','slds-hide')}">
+                <lightning:inputField fieldName="Additional_Notes__c" />
+            </div>
+            <div class="{!if(not(v.isPrivate == true),'slds-show','slds-hide')}">
+                <lightning:inputField fieldName="Public_Sponsor__c" />
+            </div>
+        </div>
+        
+        <lightning:buttonGroup class="slds-align_absolute-center slds-m-around_small">
+            <lightning:button label="Cancel" onclick="{!c.handleClick}"/>
+            <aura:if isTrue="{!v.step != 0}">
+                <lightning:button label="Previous" onclick="{!c.handleClick}"/>
+            </aura:if>
+            <aura:if isTrue="{!v.step == 0}">
+                <lightning:button label="Next" onclick="{!c.handleClick}"/>
+            </aura:if>
+            <aura:if isTrue="{!v.step == 1}">
+                <lightning:button label="Next" onclick="{!c.handleClick}"/>
+            </aura:if>
+            <aura:if isTrue="{!v.step == 2}">
+                <lightning:button label="Submit" type="submit"/>
+            </aura:if>
+        </lightning:buttonGroup>
+        
+    </lightning:recordEditForm>
+    
+</aura:component>
