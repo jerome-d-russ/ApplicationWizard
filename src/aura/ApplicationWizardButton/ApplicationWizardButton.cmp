@@ -1,4 +1,4 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
     <lightning:overlayLibrary aura:id="overlayLib"/>
     
     <aura:attribute name="width" type="String" default="100%" access="global"/>
