@@ -115,6 +115,11 @@
         <unique>false</unique>
     </fields>
     <label>Application</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>A-{0000}</displayFormat>
         <label>Application Name</label>

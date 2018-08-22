@@ -173,7 +173,11 @@
     <tab>standard-Case</tab>
     <tab>standard-Opportunity</tab>
     <tab>standard-Lead</tab>
+    <tab>Application__c</tab>
     <workspaceMappings>
+        <mapping>
+            <tab>Application__c</tab>
+        </mapping>
         <mapping>
             <tab>standard-Account</tab>
         </mapping>

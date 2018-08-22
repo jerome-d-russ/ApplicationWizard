@@ -4,5 +4,6 @@
     <label>LightningBolt</label>
     <navType>Standard</navType>
     <tab>standard-LightningBoltHome</tab>
+    <tab>Application__c</tab>
     <uiType>Lightning</uiType>
 </CustomApplication>

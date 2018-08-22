@@ -22,5 +22,6 @@
     <tab>standard-OtherUserProfile</tab>
     <tab>standard-Case</tab>
     <tab>standard-Forecasting3</tab>
+    <tab>Application__c</tab>
     <uiType>Lightning</uiType>
 </CustomApplication>

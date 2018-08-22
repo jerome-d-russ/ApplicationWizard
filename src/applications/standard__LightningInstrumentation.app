@@ -4,5 +4,6 @@
     <label>LightningInstrumentation</label>
     <navType>Standard</navType>
     <tab>standard-LightningInstrumentation</tab>
+    <tab>Application__c</tab>
     <uiType>Lightning</uiType>
 </CustomApplication>
